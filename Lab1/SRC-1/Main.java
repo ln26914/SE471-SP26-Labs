@@ -46,17 +46,14 @@ class Product {
 
 class SortingProxy extends SortingUtility {
     public void log(ArrayList<Product> unsortedListOfProducts, int sortingApproach){
-        SortingUtility mySortingUtility = new SortingUtility();
         if (sortingApproach == 0){ //BubbleSort format: ID, name, price
-            mySortingUtility.sort(unsortedListOfProducts, sortingApproach);
-            System.out.printf("%-5s%-13s%-5s\n%s\n", "ID", "Name", "Price", "-------------------------");
+            System.out.printf("\n%-5s%-13s%-5s\n%s\n", "ID", "Name", "Price", "-------------------------");
             for (int i = 0; i < unsortedListOfProducts.size(); i++) {
                 System.out.printf("%-5d%-13s%-5.2f\n", unsortedListOfProducts.get(i).ID, unsortedListOfProducts.get(i).name, unsortedListOfProducts.get(i).price);
                 }	  
             }
         else if (sortingApproach == 1){ //BubbleSort format: name, ID, price
-             mySortingUtility.sort(unsortedListOfProducts, sortingApproach);
-            System.out.printf("%-13s%-5s%-5s\n%s\n", "Name", "ID", "Price", "-------------------------");
+            System.out.printf("\n%-13s%-5s%-5s\n%s\n", "Name", "ID", "Price", "-------------------------");
             for (int i = 0; i < unsortedListOfProducts.size(); i++) {
                 System.out.printf("%-13s%-5d%-5.2f\n", unsortedListOfProducts.get(i).name, unsortedListOfProducts.get(i).ID, unsortedListOfProducts.get(i).price);
                 }	  
@@ -136,11 +133,16 @@ public class Main
 	    myUnsortedListOfProducts.add(product4);
 	    myUnsortedListOfProducts.add(product5);
 	    System.out.println("Unsorted array of products:");
-	    System.out.printf("%-13s%-5s%-5s\n%s\n", "Name", "ID", "Price", "-------------------------");
+	    System.out.printf("\n%-13s%-5s%-5s\n%s\n", "Name", "ID", "Price", "-------------------------");
         for (int i = 0; i < myUnsortedListOfProducts.size(); i++) {
             System.out.printf("%-13s%-5d%-5.2f\n", myUnsortedListOfProducts.get(i).name, myUnsortedListOfProducts.get(i).ID, myUnsortedListOfProducts.get(i).price);
             }	  
         SortingProxy mySortingProxy = new SortingProxy();
+        /* sort and log second parameter (sortingApproach)
+         * 0 = BubbleSort
+         * 1 = QuickSort
+         */
+        mySortingProxy.sort(myUnsortedListOfProducts, 0);
         mySortingProxy.log(myUnsortedListOfProducts, 0);
         mySortingProxy.log(myUnsortedListOfProducts, 1);
         mySortingProxy.log(myUnsortedListOfProducts, 2);
