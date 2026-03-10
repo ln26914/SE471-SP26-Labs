@@ -44,3 +44,5 @@ class Product {
                ", Customer Rating: " + customer_rating + "}";
     }
 }
+
+
