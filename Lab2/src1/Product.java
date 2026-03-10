@@ -33,4 +33,14 @@ class Product {
     public double getCustomerRating() {
         return customer_rating;
     }
+
+    @Override 
+    public String toString() {
+        return "Product{ID: " + id + 
+               ", Name: " + name + 
+               ", Price: " + price + 
+               ", Brand: " + brand + 
+               ", Category: " + category + 
+               ", Customer Rating: " + customer_rating + "}";
+    }
 }
