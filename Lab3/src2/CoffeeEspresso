@@ -1,0 +1,13 @@
+"""
+CoffeeEspresso.java
+
+Subclass of Coffee. Represents an Espresso coffee.
+"""
+
+public class CoffeeEspresso extends Coffee {
+    // Constructor
+    public CoffeeEspresso() {
+        super(); // Name and price for regular coffee
+        this.setCostAndDescription("Espresso Coffee", 4.00);
+    }
+}

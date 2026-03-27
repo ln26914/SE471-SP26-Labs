@@ -1,0 +1,13 @@
+"""
+CoffeeCappucino.java
+
+Subclass of Coffee. Represents a cappucino coffee.
+"""
+
+public class CoffeeCappucino extends Coffee {
+    // Constructor
+    public CoffeeCappucino() {
+        super(); // Name and price for regular coffee
+        this.setCostAndDescription("Cappucino Coffee", 5.00);
+    }
+}
